@@ -1,0 +1,416 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.picture{
+    border-radius: 50px;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 1000px;
+    background-color: aliceblue;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgb(245, 235, 235);
+}
+
+.container .left{
+    position: relative;
+    background-color: #8f6a6a;
+    padding: 40px;
+}
+
+.profiletext{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(243, 235, 235, 0.2);
+}
+
+.profiletext .profileImg{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.profiletext .profileImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profiletext h2{
+    color: #444141;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.Info{
+    padding: 40px;
+}
+
+.title{
+    color: #1d1b1b;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.4;
+    margin-bottom: 10px;
+}
+
+.Info ul{
+    position: relative;
+}
+
+.Info ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.Info.Skills .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #070707;
+    display: block;
+    margin-top: 10px;
+}
+
+.Info.Skills .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #fff;
+}
+
+.Info.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #070707;
+    display: block;
+    margin-top: 5px;
+}
+
+.Info.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #fff;
+}
+
+.container .rigth{
+    position: relative;
+    background-color: aliceblue;
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about:last-child{
+    margin-bottom: 0px;
+}
+
+.title2{
+    color: #8f6a6a;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.p{
+    color: #020202;
+}
+
+.Info.education li{
+    margin-bottom: 15px;
+}
+
+.Info.education h3{
+    position: relative;
+    padding: 40px;
+}
+
+.Info.education ul li{
+    margin-bottom: 50px;
+}
+
+.Info.education h5{
+    color: #000000;
+    font-weight: 700;
+}
+
+.Info.education h4:nth-child(2){
+    color: #000000;
+    font-weight: 500;
+}
+
+.Info .education h4{
+    color: #000000;
+    font-weight: 600;
+}
+
+.title3{
+    color: #8f6a6a;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.title3 ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 500;
+}
+
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #bdb7b7;
+}
+
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #000000;
+}
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.interest ul li{
+    list-style: none;
+    color: #1d1b1b;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+.interest ul li .icon{
+    color: #1d1b1b;
+    font-size: 18px;
+    width: 35px;
+}
+
+    /*media query*/
+    /*Extra small devices (phone, 600px and down)*/
+
+@media only screen and (max-width:600px){
+    .container{
+        display: grid;
+        grid-template-columns: .1fr 1fr 2.7fr .1fr;
+        grid-template-rows: relative;
+    }
+    .head{
+        grid-column: 1/6;
+        grid-row: 1/2;
+        background-color: #fff;
+    }
+    .profiletext{
+        display: grid;
+        grid-column: 2/4;
+        grid-row: 1/2;
+        align-items: center;
+        padding: 2cm 0;
+        margin: auto;
+        background-color: #8f6a6a;
+    }
+    .profiletext h2{
+        font-size: 50px;
+        color: #000000;
+    }
+    .Info{
+        grid-column: 2/4;
+        grid-row: 3/4;
+        padding: 0 20px 40px 20px;
+    }
+    .Info h3{
+        padding: 40px 0 15px 0;
+        color: #bdb7b7;
+    }
+    .Info.Skills{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        padding: 10px 25px;
+        background-color: #8f6a6a;
+    }
+    .Info.Skills h2{
+        font-size: 25px;
+        padding: 40px 0px 15px 0px;
+        color: rgb(0, 0, 0);
+    }
+    .Info.language{
+        display: grid;
+        padding-top: 10px;
+        text-align: center;
+        justify-items: center;
+    }
+    .Info.language h3{
+        font-size: 20px;
+        padding-top: 10px;
+        color: #000000;
+    }
+    .about{
+        display: grid;
+        padding-top: 15px;
+        text-align: center;
+        justify-items: center;
+    }
+    .title2{
+        margin: 5px 0 10px 0;
+        font-size: 20px;
+        color: #000000;
+    }
+    p{
+        padding-top: 5px;
+        color: #1d1b1b;
+    }
+    .Info.education{
+        display: grid;
+        text-align: center;
+    }
+    .Info.education h3{
+        font-size: 20px;
+        padding: 10px;
+        color: #000000;
+    }
+    .about .skills{
+        display: grid;
+        text-align: center;
+    }
+    .about .skills h2{
+        font-size: 20px;
+        padding: 10px;
+        color: #000000;
+    }
+    .about .interest{
+        display: grid;
+        text-align: center;
+    }
+    .about .interest h2{
+        font-size: 20px;
+        padding: 10px;
+    }
+    br{
+        margin: 55px 0 0 0;
+    }
+    .picture{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin-bottom: 40px;
+    }
+    .icon{
+        color: #000000;
+        filter:invert(1)
+    }
+}
+/* Small devices (portrait tablets and large phones, 601px and  up)*/
+@media only screen and (min-width: 601px){
+    .container{
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    .head{
+        grid-row: 2/5;
+        grid-column: 1/2;
+        z-index: 1;
+    }
+    .Info .skills{
+        background-color: #8f6a6a;
+        grid-column: 2/5;
+        grid-row: 2/5;
+    }
+    .Info.language{
+        background-color: #8f6a6a;
+        grid-row: 2/5;
+        grid-column: 5/6;
+    }
+    .about{
+        grid-column: 1/6;
+        grid-row: 5/6;
+    }
+}
+
+/* Large devices (laptop/desktops, 1000px and up)*/
+@media only screen and (min-width: 1000px){
+    .container{
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    .head{
+        grid-row: 2/5;
+        grid-column: 1/2;
+        z-index: 1;
+    }
+    .Info .skills{
+        background-color: #8f6a6a;
+        grid-column: 2/5;
+        grid-row: 2/5;
+    }
+    .Info.language{
+        background-color: #8f6a6a;
+        grid-row: 2/5;
+        grid-column: 5/6;
+    }
+    .about{
+        grid-column: 1/6;
+        grid-row: 5/6;
+    }
+}
